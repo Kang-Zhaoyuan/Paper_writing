@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.9.2)  2 FEB 2026 21:15
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.9.2)  2 FEB 2026 23:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -681,17 +681,27 @@ File: Rank_Diff_Distribution.png Graphic file (type bmp)
 [10]
 
 [11]
+File: B_B_S27_Survival_Comparison.png Graphic file (type bmp)
+<B_B_S27_Survival_Comparison.png>
+File: waffles.png Graphic file (type bmp)
+<waffles.png>
+
 
 [12]
+File: Sress_Test.png Graphic file (type bmp)
+<Sress_Test.png>
+
 
 [13]
-Overfull \hbox (6.55756pt too wide) in paragraph at lines 691--692
+
+[14]
+Overfull \hbox (6.55756pt too wide) in paragraph at lines 703--704
 \TU/SimSun(0)/m/n/12 生 成 舞 伴 特 征 \TU/lmtt/m/n/12 avg_judge_improvement\TU/TimesNewRoman(0)/m/n/12 , \TU/lmtt/m/n/12 avg_fan_improvement\TU/TimesNewRoman(0)/m/n/12 , \TU/lmtt/m/n/12 avg_judge_performance\TU/TimesNewRoman(0)/m/n/12 ,
  []
 
 
 
-[14]
+[15]
 File: industry_judge_impact.png Graphic file (type bmp)
 <industry_judge_impact.png>
 File: industry_fan_impact.png Graphic file (type bmp)
@@ -700,33 +710,33 @@ File: industry_scatter_optimized_with_arrow.png Graphic file (type bmp)
 <industry_scatter_optimized_with_arrow.png>
 
 
-[15]
-
 [16]
+
+[17]
 File: region_judges_score_violin.png Graphic file (type bmp)
 <region_judges_score_violin.png>
 File: region_fan_votes_violin.png Graphic file (type bmp)
 <region_fan_votes_violin.png>
 
 
-[17]
+[18]
 File: age_kde_lowess.png Graphic file (type bmp)
 <age_kde_lowess.png>
 File: age_industry_interaction_v2.png Graphic file (type bmp)
 <age_industry_interaction_v2.png>
 
 
-[18]
-
 [19]
+
+[20]
 File: partner_teaching_effect_judge.png Graphic file (type bmp)
 <partner_teaching_effect_judge.png>
 File: partner_growth_effect_fan.png Graphic file (type bmp)
 <partner_growth_effect_fan.png>
 
 
-[20]
-Overfull \hbox (10.34735pt too wide) in paragraph at lines 895--904
+[21]
+Overfull \hbox (10.34735pt too wide) in paragraph at lines 907--916
  [][] 
  []
 
@@ -734,19 +744,17 @@ File: partner_improvement_ranking.png Graphic file (type bmp)
 <partner_improvement_ranking.png>
 
 
-[21]
-
 [22]
+
+[23]
 File: feature_importance_zscore.png Graphic file (type bmp)
 <feature_importance_zscore.png>
 
 
-[23]
+[24]
 File: feature_importance_detailed.png Graphic file (type bmp)
 <feature_importance_detailed.png>
 
-
-[24]
 
 [25]
 
@@ -754,13 +762,57 @@ File: feature_importance_detailed.png Graphic file (type bmp)
 
 [27]
 
-[28
+[28]
+
+[29
 
 ]
+Overfull \hbox (1.17168pt too wide) in paragraph at lines 1109--1110
+\TU/TimesNewRoman(0)/m/n/12 ment. In each season, celebrities from diverse professional backgrounds are paired
+ []
+
+
+Overfull \hbox (154.39478pt too wide) in paragraph at lines 1133--1133
+ []    \TU/lmtt/m/n/10.95 raise ValueError("All files failed to read or no valid data exists, merging is not possible!")[] 
+ []
+
+
+Overfull \hbox (56.66605pt too wide) in paragraph at lines 1133--1133
+ []\TU/lmtt/m/n/10.95 # Merge all DataFrames, ignore original indices, and reset a new continuous index[] 
+ []
+
+
+Overfull \hbox (114.15353pt too wide) in paragraph at lines 1133--1133
+ []\TU/lmtt/m/n/10.95 # Sort by original Chinese columns: Season → Week → Contestant Name for subsequent analysis[] 
+ []
+
+
 
 [1
 
-] 
+]
+Overfull \hbox (68.16354pt too wide) in paragraph at lines 1133--1133
+ []\TU/lmtt/m/n/10.95 merged_df = merged_df.sort_values(by=["Season", "Week", "Name"], ignore_index=True)[] 
+ []
+
+
+Overfull \hbox (217.63101pt too wide) in paragraph at lines 1133--1133
+ []\TU/lmtt/m/n/10.95 # (Optional) Remove duplicate rows (if duplicate data exists for the same Season-Week-Contestant combination)[] 
+ []
+
+
+Overfull \hbox (85.40977pt too wide) in paragraph at lines 1133--1133
+ []\TU/lmtt/m/n/10.95 merged_df = merged_df.drop_duplicates(subset=["Season", "Week", "Name"], keep="first")[] 
+ []
+
+
+Overfull \hbox (119.90227pt too wide) in paragraph at lines 1133--1133
+ []\TU/lmtt/m/n/10.95 print(f"\n Merging completed! The full-season data has been saved to: {Config.OUTPUT_FILE}")[] 
+ []
+
+
+
+[2] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./paper.aux)
  ***********
@@ -769,12 +821,12 @@ L3 programming layer <2022/08/05>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 11223 strings out of 473832
- 289369 string characters out of 5733159
- 688414 words of memory out of 5000000
- 34122 multiletter control sequences out of 15000+600000
- 565940 words of font info for 106 fonts, out of 8000000 for 9000
+ 11260 strings out of 473832
+ 290191 string characters out of 5733159
+ 686561 words of memory out of 5000000
+ 34154 multiletter control sequences out of 15000+600000
+ 565948 words of font info for 107 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 79i,15n,93p,780b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,15n,93p,780b,1237s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on paper.pdf (32 pages).
+Output written on paper.pdf (34 pages).
