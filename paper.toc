@@ -2,8 +2,8 @@
 \contentsline {subsection}{\numberline {1.1}Problem Background}{1}{}%
 \contentsline {subsection}{\numberline {1.2}Restatement of the Problem}{1}{}%
 \contentsline {subsection}{\numberline {1.3}Our Work}{2}{}%
-\contentsline {section}{\numberline {2}Assumptions \& Justifications}{2}{}%
-\contentsline {section}{\numberline {3}Notations}{2}{}%
+\contentsline {section}{\numberline {2}Assumptions \& Justifications}{3}{}%
+\contentsline {section}{\numberline {3}Notations}{3}{}%
 \contentsline {section}{\numberline {4}Data Description and Processing}{3}{}%
 \contentsline {section}{\numberline {5}蒙特卡洛模拟与参数反演：观众投票行为建模}{3}{}%
 \contentsline {subsection}{\numberline {5.1}随机行为模型的构建与投票估算公式}{3}{}%
@@ -23,39 +23,39 @@
 \contentsline {subsection}{\numberline {6.3}跨赛季对比：两种规则的整体差异与偏袒性}{9}{}%
 \contentsline {subsection}{\numberline {6.4}争议选手的规则敏感性与评委拯救机制评估}{9}{}%
 \contentsline {subsubsection}{\numberline {6.4.1}争议样本与判定标准}{9}{}%
-\contentsline {subsubsection}{\numberline {6.4.2}规则敏感性回放结果（排名法 vs 百分比法）}{10}{}%
-\contentsline {subsubsection}{\numberline {6.4.3}评委拯救机制模拟与影响}{11}{}%
-\contentsline {subsubsection}{\numberline {6.4.4}案例小结与对争议解释}{11}{}%
-\contentsline {subsubsection}{\numberline {6.4.5}对未来规则的启示}{11}{}%
-\contentsline {section}{\numberline {7}Decoding Success: What Makes a Winning Couple?}{12}{}%
-\contentsline {subsection}{\numberline {7.1}研究目标与问题定义}{12}{}%
-\contentsline {subsection}{\numberline {7.2}数据处理与标准化}{12}{}%
-\contentsline {subsection}{\numberline {7.3}特征工程}{12}{}%
-\contentsline {subsubsection}{\numberline {7.3.1}选手属性特征}{12}{}%
-\contentsline {subsubsection}{\numberline {7.3.2}地域背景特征}{13}{}%
-\contentsline {subsubsection}{\numberline {7.3.3}舞伴能力特征}{13}{}%
-\contentsline {subsubsection}{\numberline {7.3.4}分类变量编码与最终特征矩阵}{13}{}%
-\contentsline {subsection}{\numberline {7.4}选手属性的影响分析}{14}{}%
-\contentsline {subsubsection}{\numberline {7.4.1}职业类别的影响}{14}{}%
-\contentsline {subsubsection}{\numberline {7.4.2}地域背景的影响}{14}{}%
-\contentsline {subsubsection}{\numberline {7.4.3}年龄效应的影响}{15}{}%
-\contentsline {subsection}{\numberline {7.5}舞伴效应的深度建模}{18}{}%
-\contentsline {subsubsection}{\numberline {7.5.1}标准化与成长斜率的定义}{19}{}%
-\contentsline {subsubsection}{\numberline {7.5.2}二维散点：基础水平 vs. 成长速度}{19}{}%
-\contentsline {subsubsection}{\numberline {7.5.3}Top 舞伴识别：相对下滑最慢的“教练型”舞伴}{19}{}%
-\contentsline {subsection}{\numberline {7.6}多因素综合归因：随机森林模型}{21}{}%
-\contentsline {subsubsection}{\numberline {7.6.1}为什么需要多元模型（单因素分析的局限）}{21}{}%
-\contentsline {subsubsection}{\numberline {7.6.2}Q3 代码逻辑与模型构建}{21}{}%
-\contentsline {subsubsection}{\numberline {7.6.3}特征重要性排序：评委端更“能力导向”，粉丝端更“结构导向”}{22}{}%
-\contentsline {subsection}{\numberline {7.7}总结}{22}{}%
-\contentsline {section}{\numberline {8}给组委会的建议: 迈向直观与平衡的新纪元}{25}{}%
-\contentsline {subsection}{\numberline {8.1}提案核心： “30+30” 计分模式}{25}{}%
-\contentsline {subsection}{\numberline {8.2}优势一：极致的观众友好度 (Audience Accessibility)}{25}{}%
-\contentsline {subsection}{\numberline {8.3}优势二：强制性的结构平衡 (Structural Balance)}{26}{}%
-\contentsline {subsection}{\numberline {8.4}总结}{26}{}%
-\contentsline {section}{\numberline {9}Results and Discussion}{26}{}%
-\contentsline {section}{\numberline {10}Sensitivity Analysis}{26}{}%
-\contentsline {section}{\numberline {11}Strengths and Weaknesses}{26}{}%
-\contentsline {subsection}{\numberline {11.1}Strengths}{26}{}%
-\contentsline {subsection}{\numberline {11.2}Weaknesses}{26}{}%
-\contentsline {section}{\numberline {12}Conclusion}{26}{}%
+\contentsline {subsubsection}{\numberline {6.4.2}规则敏感性回放结果（排名法 vs 百分比法）}{11}{}%
+\contentsline {subsubsection}{\numberline {6.4.3}评委拯救机制模拟与影响}{12}{}%
+\contentsline {subsubsection}{\numberline {6.4.4}案例小结与对争议解释}{12}{}%
+\contentsline {subsubsection}{\numberline {6.4.5}对未来规则的启示}{12}{}%
+\contentsline {section}{\numberline {7}Decoding Success: What Makes a Winning Couple?}{13}{}%
+\contentsline {subsection}{\numberline {7.1}研究目标与问题定义}{13}{}%
+\contentsline {subsection}{\numberline {7.2}数据处理与标准化}{13}{}%
+\contentsline {subsection}{\numberline {7.3}特征工程}{13}{}%
+\contentsline {subsubsection}{\numberline {7.3.1}选手属性特征}{13}{}%
+\contentsline {subsubsection}{\numberline {7.3.2}地域背景特征}{14}{}%
+\contentsline {subsubsection}{\numberline {7.3.3}舞伴能力特征}{14}{}%
+\contentsline {subsubsection}{\numberline {7.3.4}分类变量编码与最终特征矩阵}{14}{}%
+\contentsline {subsection}{\numberline {7.4}选手属性的影响分析}{15}{}%
+\contentsline {subsubsection}{\numberline {7.4.1}职业类别的影响}{15}{}%
+\contentsline {subsubsection}{\numberline {7.4.2}地域背景的影响}{16}{}%
+\contentsline {subsubsection}{\numberline {7.4.3}年龄效应的影响}{18}{}%
+\contentsline {subsection}{\numberline {7.5}舞伴效应的深度建模}{19}{}%
+\contentsline {subsubsection}{\numberline {7.5.1}标准化与成长斜率的定义}{20}{}%
+\contentsline {subsubsection}{\numberline {7.5.2}二维散点：基础水平 vs. 成长速度}{20}{}%
+\contentsline {subsubsection}{\numberline {7.5.3}Top 舞伴识别：相对下滑最慢的“教练型”舞伴}{21}{}%
+\contentsline {subsection}{\numberline {7.6}多因素综合归因：随机森林模型}{22}{}%
+\contentsline {subsubsection}{\numberline {7.6.1}为什么需要多元模型（单因素分析的局限）}{22}{}%
+\contentsline {subsubsection}{\numberline {7.6.2}Q3 代码逻辑与模型构建}{22}{}%
+\contentsline {subsubsection}{\numberline {7.6.3}特征重要性排序：评委端更“能力导向”，粉丝端更“结构导向”}{23}{}%
+\contentsline {subsection}{\numberline {7.7}总结}{25}{}%
+\contentsline {section}{\numberline {8}给组委会的建议: 迈向直观与平衡的新纪元}{26}{}%
+\contentsline {subsection}{\numberline {8.1}提案核心： “30+30” 计分模式}{26}{}%
+\contentsline {subsection}{\numberline {8.2}优势一：极致的观众友好度 (Audience Accessibility)}{26}{}%
+\contentsline {subsection}{\numberline {8.3}优势二：强制性的结构平衡 (Structural Balance)}{27}{}%
+\contentsline {subsection}{\numberline {8.4}总结}{27}{}%
+\contentsline {section}{\numberline {9}Results and Discussion}{27}{}%
+\contentsline {section}{\numberline {10}Sensitivity Analysis}{27}{}%
+\contentsline {section}{\numberline {11}Strengths and Weaknesses}{27}{}%
+\contentsline {subsection}{\numberline {11.1}Strengths}{27}{}%
+\contentsline {subsection}{\numberline {11.2}Weaknesses}{27}{}%
+\contentsline {section}{\numberline {12}Conclusion}{27}{}%

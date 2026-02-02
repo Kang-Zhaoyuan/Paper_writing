@@ -13,6 +13,9 @@
 \setCJKmonofont{SimSun}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{float}
+\usepackage{flafter}
+\usepackage[section]{placeins}
 \usepackage{xcolor}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{fancyhdr}
@@ -21,6 +24,20 @@
 \usepackage{tocloft}
 \usepackage{enumitem}
 \usepackage{lastpage}
+
+% Float placement tuning
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.9}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.8}
+
+% Force figures to appear near their source location
+\makeatletter
+\renewenvironment{figure}[1][]{\@float{figure}[H]}{\end@float}
+\makeatother
 
 \renewcommand{\contentsname}{Contents}
 \renewcommand{\refname}{References}
@@ -375,17 +392,6 @@ w_{ij}=\begin{cases}
 
 \section{偏好权衡与抗波动性：DWTS 计分规则演变及其对粉丝/评委影响力评估的研究}
 
-本节的计算流程如下：
-
-首先，使用第一问的“全赛季每周估计详情”数据，在周次层面过滤无效样本（选手数不足或无淘汰结果的周）。
-
-随后，对每个赛季、每一周并行回放两种合并规则（排名法与百分比法），得到组合排名与预测淘汰者。在此基础上计算两类指标：
-
-其一是偏袒性系数 $I$，比较粉丝票与评委分对组合排名的相对影响；
-
-其二是稳定性 $S$，通过对粉丝票进行 $\pm 20\%$ 随机扰动的蒙特卡洛模拟，统计淘汰结果保持不变的概率。
-
-最后，对周度指标做赛季聚合（均值与标准差），并输出跨赛季对比图表与汇总结论。
 
 \subsection{研究目标与问题定义}
 
@@ -414,47 +420,35 @@ w_{ij}=\begin{cases}
 
 \subsection{跨赛季对比：两种规则的整体差异与偏袒性}
 
---- 图：偏袒性系数对比（全赛季） ---
-% \begin{figure}[htbp]
-%     \centering
-%     \fbox{\parbox[c][0.28\textheight][c]{0.9\textwidth}{\centering\large 图：各赛季两种方法的偏袒性系数（$I$）对比}}
-%     \caption{各赛季两种方法的偏袒性系数（$I$）对比。}
-%     \label{fig:bias_index_compare}
-% \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Comparison_of_Partiality_Coefficient_(I)_Trends_for_Two_Rules_in_34_seasons.png}
+    \caption{各赛季偏袒性系数（$I$）对比。}
+    \label{fig:bias_index_compare}
+\end{figure}
+
+图 \ref{fig:bias_index_compare} 中，蓝线为排名法（均值 1.103），橙线为百分比法（均值 2.281）；虚线为基准线 $I=1$（评委—粉丝平衡），点线为各方法均值。
 
 
---- 图：偏袒性系数对比（缩放视图/局部） ---
-% \begin{figure}[htbp]
-%     \centering
-%     Comparison of Bias Index ($I$) in the 0--2 range across different seasons.
-%     \caption{偏袒性系数对比的缩放视图（用于观察 $I$ 在 0--2 区间的差异）。}
-%     \label{fig:bias_index_zoom}
-% \end{figure}
+全赛季结果显示，百分比法的 $I$ 整体高于排名法，说明其更偏向粉丝票；排名法的 $I$ 更接近 1，较为平衡。两种规则的稳定性均接近 1，规则差异主要体现在“倾向性”而非“随机性”。
 
-
-
-
-
-
-从全赛季汇总结果看，百分比法的偏袒性系数整体高于排名法，说明其更容易放大粉丝票的影响；而排名法的 $I$ 值多集中在 1 附近，更接近“评委—粉丝”平衡的理想状态。具体而言，34 个赛季中有 33 个赛季满足“百分比法 $I$ 均值 $>$ 排名法 $I$ 均值”（占比 97.1\%），仅第 10 赛季出现反例（排名法 $I=1.055$，百分比法 $I=0.994$）。该结论在绝大多数赛季均保持一致，说明规则差异具有结构性而非偶然性。
-
---- 图：结果稳定性率对比（全赛季） ---
-% \begin{figure}[htbp]
-%     \centering
-%     Comparison of Stability Rate ($S$) between Ranking and Percentage methods.
-%     \caption{各赛季两种方法的结果稳定性率（$S$）对比。}
-%     \label{fig:stability_compare}
-% \end{figure}
-
---- 图：选手级预测准确率趋势 ---
-% \begin{figure}[htbp]
-%     \centering
-%     Trends of player-level historical prediction accuracy across all seasons.
-%     \caption{各赛季选手级预测准确率趋势。}
-%     \label{fig:player_acc_trend}
-% \end{figure}
-
-稳定性方面，两种规则在多数赛季的 $S$ 值接近 1，表明当粉丝票在合理范围内波动时，淘汰结果总体稳定。这意味着规则差异主要体现在“倾向性”而非“随机性”。以全赛季均值衡量，排名法与百分比法的稳定性均为 $S=1.000$，即$S$几乎不受到粉丝票波动的影响。
+\begin{table}[htbp]
+    \centering
+    \caption{跨赛季对比的核心结果汇总}
+    \label{tab:rule_compare_summary}
+    \renewcommand{\arraystretch}{1.15}
+    \setlength{\tabcolsep}{8pt}
+    \begin{tabular}{p{0.46\textwidth}cc}
+        \toprule
+        \textbf{指标} & \textbf{排名法} & \textbf{百分比法} \\
+        \midrule
+        $I$ 全赛季均值 & 1.103 & 2.281 \\
+        满足 $I_{\text{percent}} > I_{\text{rank}}$ 的赛季数 & 33/34  & 97.1\% \\
+        反例赛季 &   $I_{\text{rank}}=1.055$ & $I_{\text{percent}}=0.994$ \\
+        稳定性均值 $S$ & 1.000 & 1.000 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 
 \noindent\textbf{小结：} 百分比法整体更偏向粉丝票，两种规则的都极稳定。
@@ -488,36 +482,60 @@ w_{ij}=\begin{cases}
 \end{equation}
 其中 $Q_{p}(\cdot)$ 为样本 $p$ 分位数，上述阈值均由数据计算得到。
 
-上述公式含义如下：$|\Delta R_{ij}|$ 衡量评委与粉丝排序的偏离幅度；
+上述公式含义如下表所示：
+\begin{table}[htbp]
+    \centering
+    \caption{争议样本判定指标说明}
+    \label{tab:controversy_indicator_def}
+    \begin{tabular}{p{0.26\textwidth} p{0.66\textwidth}}
+        \toprule
+        \textbf{符号} & \textbf{含义} \\
+        \midrule
+        $|\Delta R_{ij}|$ & 衡量评委与粉丝排序的偏离幅度。 \\
+        $\tau$ & $|\Delta R_{ij}|$ 的 90\% 分位数，用于定义“冲突周”。 \\
+        $K_i$ & 选手在赛季内的冲突周数。 \\
+        $\mathbb{S}_{ij}$ & “低评委分—高粉丝票”的结构性冲突：评委分落入当周下四分位且粉丝票进入上四分位。 \\
+        $\mathbb{C}_i=1$ & 同时满足“频繁冲突”和“结构性冲突”，判定为争议样本。 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
-$\tau$ 取其 90\% 分位数，定义“冲突周”；
 
-$K_i$ 统计选手在赛季内的冲突周数；
-
-$\mathbb{S}_{ij}$ 强调“低评委分—高粉丝票”的结构性冲突（评委分落入当周下四分位且粉丝票进入上四分位）；
-
-最终 $\mathbb{C}_i=1$ 表示该选手同时满足“频繁冲突”和“结构性冲突”两类条件，因此被判定为争议样本。
-
- (这里可以画张图说明冲突周的定义)
 
 题目给出的 S2、S4、S11、S27 均满足 $\mathbb{C}_i=1$；其余样本按同一公式筛选。
 
 
---- 图：争议样本散点图占位 ---
-% \begin{figure}[htbp]
-%     \centerin
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Controversial_Sample_Identification_Scatter_Plot.png}
+    \caption{争议样本识别散点图：冲突周数 $K_i$ 与结构性冲突累计 $\sum_j \mathbb{S}_{ij}$。}
+    \label{fig:controversial_sample_scatter}
+\end{figure}
 
 为检验跨赛季一致性，展示 $\Delta R_{ij}$ 的分布（箱线图/热力图）。
 
---- 图：排名差值分布占位 ---
-%这张图片
-% \begin{figure}[htbp]
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Heatmap_Tail_Outliers.png}
+        \caption{争议选手在各赛季的 $\Delta R$ 离群值热力图。}
+        \label{fig:delta_r_heatmap}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Rank_Diff_Distribution.png}
+        \caption{各赛季排名差 $\Delta R$ 分布。}
+        \label{fig:delta_r_distribution}
+    \end{subfigure}
+    \caption{争议周次的冲突强度分析：热力图展示个体离群程度，分布图展示全季汇总。}
+    \label{fig:delta_r_analysis}
+\end{figure}
 
-该图用于定位 $|\Delta R_{ij}|$ 的尾部离群点。
 
 值得一提的是，这与（油管视频：节目30大丑闻）中提到的争议选手高度重合，验证了我们争议样本筛选方法的有效性与客观性。
 
-（是否添加图片？）
 
 在确定样本后，我们将在下一小节对两种计分规则进行“规则回放”，比较排名法与百分比法在这些样本上的淘汰与晋级结果，并进一步检验评委拯救机制是否能降低争议样本的胜出概率或改变其最终名次。
 
@@ -534,14 +552,6 @@ $\mathbb{S}_{ij}$ 强调“低评委分—高粉丝票”的结构性冲突（�
 \end{itemize}
 
 下图给出争议样本在两种规则下的名次变化对比；表格汇总了各样本的 $\Delta P$ 与 $\Delta W$。
-
---- 图：规则敏感性名次变化占位 ---
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.85\textwidth]{rule_sensitivity_rank_change_placeholder}
-%     \caption{争议样本在排名法与百分比法下的名次变化对比。正值表示排名法更有利，负值表示百分比法更有利。}
-%     \label{fig:rule_sensitivity_rank_change}
-% \end{figure}
 
 % --- 表：规则敏感性指标汇总占位 ---
 \begin{table}[htbp]
