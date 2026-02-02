@@ -1,0 +1,58 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Problem Background}{1}{}%
+\contentsline {subsection}{\numberline {1.2}Restatement of the Problem}{1}{}%
+\contentsline {subsection}{\numberline {1.3}Our Work}{2}{}%
+\contentsline {section}{\numberline {2}Assumptions \& Justifications}{2}{}%
+\contentsline {section}{\numberline {3}Notations}{4}{}%
+\contentsline {section}{\numberline {4}Data Description and Processing}{4}{}%
+\contentsline {subsection}{\numberline {4.1}Data Source and Original Structure}{4}{}%
+\contentsline {subsection}{\numberline {4.2}Data Cleaning and Feature Engineering}{4}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}Data Reshaping and Filtering}{4}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Metric Calculation}{5}{}%
+\contentsline {subsubsection}{\numberline {4.2.3}Target Variable Extraction}{5}{}%
+\contentsline {subsection}{\numberline {4.3}随机行为模型的构建与投票估算公式}{5}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}公式的建立}{5}{}%
+\contentsline {subsubsection}{\numberline {4.3.2}参数范围的选择}{6}{}%
+\contentsline {subsubsection}{\numberline {4.3.3}改进的权重转换方法：从绝对分到相对秩}{7}{}%
+\contentsline {subsection}{\numberline {4.4}Consistency 一致性度量：历史淘汰结果的再现能力分析}{7}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}一致性得分的定义}{7}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}模拟结果与历史数据的一致性检验}{7}{}%
+\contentsline {subsubsection}{\numberline {4.4.3}外部一致性：Google Trends 数据的交叉校验}{8}{}%
+\contentsline {subsubsection}{\numberline {4.4.4}逻辑一致性的深度讨论：针对 S11 与 S27 的特例分析}{9}{}%
+\contentsline {subsubsection}{\numberline {4.4.5}总结}{10}{}%
+\contentsline {subsection}{\numberline {4.5}Certainty 确定性度量：粉丝投票估值的稳定性分析}{10}{}%
+\contentsline {section}{\numberline {5}偏好权衡与抗波动性：DWTS 计分规则演变及其对粉丝/评委影响力评估的研究}{10}{}%
+\contentsline {subsection}{\numberline {5.1}研究目标与问题定义}{10}{}%
+\contentsline {subsection}{\numberline {5.2}指标构建}{11}{}%
+\contentsline {subsection}{\numberline {5.3}跨赛季对比：两种规则的整体差异与偏袒性}{11}{}%
+\contentsline {subsection}{\numberline {5.4}争议选手的规则敏感性与评委拯救机制评估}{12}{}%
+\contentsline {subsubsection}{\numberline {5.4.1}争议样本与判定标准}{12}{}%
+\contentsline {subsubsection}{\numberline {5.4.2}规则敏感性回放结果（排名法 vs 百分比法）}{14}{}%
+\contentsline {subsubsection}{\numberline {5.4.3}评委拯救机制模拟与影响}{14}{}%
+\contentsline {subsubsection}{\numberline {5.4.4}极端假设验证：赛季模拟小结（以S11为例）}{15}{}%
+\contentsline {subsubsection}{\numberline {5.4.5}对未来规则的启示}{16}{}%
+\contentsline {section}{\numberline {6}Decoding Success: What Makes a Winning Couple?}{16}{}%
+\contentsline {subsection}{\numberline {6.1}研究目标与问题定义}{16}{}%
+\contentsline {subsection}{\numberline {6.2}数据处理与标准化}{16}{}%
+\contentsline {subsection}{\numberline {6.3}特征工程}{16}{}%
+\contentsline {subsubsection}{\numberline {6.3.1}选手属性特征}{16}{}%
+\contentsline {subsubsection}{\numberline {6.3.2}地域背景特征}{17}{}%
+\contentsline {subsubsection}{\numberline {6.3.3}舞伴能力特征}{17}{}%
+\contentsline {subsubsection}{\numberline {6.3.4}分类变量编码与最终特征矩阵}{18}{}%
+\contentsline {subsection}{\numberline {6.4}选手属性的影响分析}{18}{}%
+\contentsline {subsubsection}{\numberline {6.4.1}职业类别的影响}{18}{}%
+\contentsline {subsubsection}{\numberline {6.4.2}地域背景的影响}{19}{}%
+\contentsline {subsubsection}{\numberline {6.4.3}年龄效应的影响}{21}{}%
+\contentsline {subsection}{\numberline {6.5}舞伴效应的深度建模}{22}{}%
+\contentsline {subsubsection}{\numberline {6.5.1}标准化与成长斜率的定义}{23}{}%
+\contentsline {subsubsection}{\numberline {6.5.2}二维散点：基础水平 vs. 成长速度}{23}{}%
+\contentsline {subsection}{\numberline {6.6}多因素综合归因：随机森林模型}{24}{}%
+\contentsline {subsubsection}{\numberline {6.6.1}为什么需要多元模型（单因素分析的局限）}{24}{}%
+\contentsline {subsubsection}{\numberline {6.6.2}Q3 代码逻辑与模型构建}{24}{}%
+\contentsline {subsubsection}{\numberline {6.6.3}特征重要性排序：评委端更“能力导向”，粉丝端更“结构导向”}{25}{}%
+\contentsline {subsection}{\numberline {6.7}总结}{26}{}%
+\contentsline {section}{\numberline {7}给组委会的建议：}{26}{}%
+\contentsline {section}{\numberline {8}Strengths and Weaknesses}{27}{}%
+\contentsline {subsection}{\numberline {8.1}Strengths}{27}{}%
+\contentsline {subsection}{\numberline {8.2}Weaknesses}{27}{}%
+\contentsline {section}{\numberline {9}Conclusion}{27}{}%
